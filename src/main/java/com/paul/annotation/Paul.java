@@ -9,13 +9,13 @@ import java.lang.annotation.Target;
 
 @Documented
 @Inherited
-@Target(value = ElementType.FIELD)
+@Target(value = { ElementType.TYPE, ElementType.METHOD, ElementType.FIELD })
 @Retention(value = RetentionPolicy.RUNTIME)
 public @interface Paul {
-	
+
 	int id() default 0;
 
 	String name() default "";
-	
+
 	String description() default "";
 }
