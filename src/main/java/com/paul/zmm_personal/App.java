@@ -19,14 +19,22 @@ public class App {
 //				|| resultInfo.getObject().getId() == null) ? 0L : resultInfo.getObject().getId();
 //		System.out.println("everything's fine: " + contactNewId2);
 	    
-	    try {
-	        String s = "this is a emssage";
-	        System.out.println(s);
-	        throw new RuntimeException("runtime exception");
-	    }catch (Exception e){
-//	        System.out.println(e.getMessage());
-//	        System.out.println("wo jiu bu chu li");
+//	    try {
+//	        String s = "this is a emssage";
+//	        System.out.println(s);
+//	        return;
+//	    }catch (Exception e){
+////	        System.out.println(e.getMessage());
+////	        System.out.println("wo jiu bu chu li");
+//	    }finally {
+//	        System.out.println("wokao !");
+//	    }
+	    
+	    Integer statusType = null;
+	    statusType=2;
+	    if(statusType == null || (statusType != 0 && statusType != 2 && statusType !=4)) {
+	        System.out.println("haoya");
 	    }
-
+	    System.out.println("haoyasss");
 	}
 }
