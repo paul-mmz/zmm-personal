@@ -6,6 +6,8 @@ http://www.cnblogs.com/caoyc/p/5624417.html
 
 阿里技术公众号
 
+Disconf作为static变量，省略各个类中需要使用时进行的自动注入配置
+
 
 
 
@@ -13,3 +15,28 @@ http://www.cnblogs.com/caoyc/p/5624417.html
 http://nb.bbs.netease.com/viewthread.php?tid=19792&highlight=%E5%90%8E%E5%8B%A4
 
 http://nb.bbs.netease.com/viewthread.php?tid=19725&page=1&extra=#pid44514
+
+
+股票：
+http://www.futunn.com/minvite/share?uid=3214158
+
+https://www.futunn.com/
+
+钱宝：
+http://tieba.baidu.com/f?kw=%E9%92%B1%E5%AE%9D%E7%BD%91&ie=utf-8
+
+
+
+java基础：核心技术两本，比编程思想知识点梳理的好点；java并发实战 深入理解java虚拟机 设计模式 我觉得这些基础差不多了 
+
+
+框架的话 就spring 再加一个orm框架就好 比如mybatis
+
+
+中间件 nginx redis zk 消息队列二选一rabbit或activemq
+
+
+比如看看nginx负载平衡 redis集群部署 这些也都是分布式的 
+
+
+然后就是linux系统底层沉淀了
