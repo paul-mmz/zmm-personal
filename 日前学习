@@ -4,6 +4,11 @@ http://blog.163.com/zhangjie_it/blog/static/1167348920103684712900/
 
 http://www.cnblogs.com/caoyc/p/5624417.html
 
+http://bbs.netease.im/read-tid-597
+
+AOP是如何生成代理类的/JDK代理和cglib代理
+切面的几种技术Spring自带切面/AspectJ
+
 阿里技术公众号
 
 Disconf作为static变量，省略各个类中需要使用时进行的自动注入配置
