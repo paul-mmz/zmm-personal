@@ -47,3 +47,18 @@ java基础：核心技术两本，比编程思想知识点梳理的好点；java
 
 
 然后就是linux系统底层沉淀了
+
+
+线程池，连接池
+
+Druid学习
+
+BeanFactoryAware
+
+InitializingBean
+
+BeanFactory
+
+FactoryBean
+
+dubbo中的stub,有些接口中对某一个接口有两个声明，如：CreditsService,CreditsServiceImpl和CreditsServiceStub
