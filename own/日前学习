@@ -51,6 +51,19 @@ java基础：核心技术两本，比编程思想知识点梳理的好点；java
 
 线程池，连接池
 
+JKD中线程池机制学习:
+http://calvin1978.blogcn.com/articles/java-threadpool.html
+
+org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor
+
+RunTime
+
+Tomcat线程池
+
+http://calvin1978.blogcn.com/articles/java-threadpool.html
+
+
+
 Druid学习
 
 BeanFactoryAware
