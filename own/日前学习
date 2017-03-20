@@ -60,8 +60,10 @@ RunTime
 
 Tomcat线程池
 
-http://calvin1978.blogcn.com/articles/java-threadpool.html
+http://calvin1978.blogcn.com/articles/tomcat-threadpool.html
 
+
+定时器：Timer
 
 
 Druid学习
