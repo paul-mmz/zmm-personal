@@ -77,3 +77,12 @@ BeanFactory
 FactoryBean
 
 dubbo中的stub,有些接口中对某一个接口有两个声明，如：CreditsService,CreditsServiceImpl和CreditsServiceStub
+
+
+
+分布式事务
+
+
+分布式事务锁：
+redis实现
+zookeeper实现
