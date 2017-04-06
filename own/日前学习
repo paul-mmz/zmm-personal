@@ -17,6 +17,12 @@ http://mp.weixin.qq.com/s?__biz=MjM5NTg2NTU0Ng==&mid=2656594251&idx=1&sn=ac23a1f
 
 http://blog.jobbole.com/99751/
 
+dubbo接口如何暴露在不同的IP上
+
+没有机房IP的话，服务器不在同租户下不能访问
+
+
+
 
 
 租房：
