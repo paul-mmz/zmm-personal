@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>myHttpServlet</servlet-name>
+  	<servlet-class>com.paul.servlet.MyHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>myHttpServlet</servlet-name>
+  	<url-pattern>/myhttp</url-pattern>
+  </servlet-mapping>
 </web-app>
