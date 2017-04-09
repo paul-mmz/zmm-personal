@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class DispatcherServlet
  */
-@WebServlet(name="DispatcherServlet", urlPatterns={"/input", "/productSave"})
 public class DispatcherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

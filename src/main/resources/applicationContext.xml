@@ -17,5 +17,13 @@
 	<bean id = "product2" class = "com.paul.spring.beans.Product">
 		<property name="calendar" ref="calendar" />
 	</bean>
-
+	
+	<bean name = "/newinput" class="com.paul.controller.ProductInput"/>
+	
+	<bean name = "/productSave" class = "com.paul.controller.ProductDetails" />
+	
+	<bean id = "viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver" >
+		<property name="prefix" value="/WEB-INF/classes/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
 </beans>
