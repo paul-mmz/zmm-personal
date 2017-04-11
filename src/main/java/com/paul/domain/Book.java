@@ -26,6 +26,10 @@ public class Book implements Serializable{
 	
 	private String author;
 	
+	public Book() {
+		super();
+	}
+
 	/**
 	 * @param id
 	 * @param isbn

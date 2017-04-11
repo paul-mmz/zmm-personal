@@ -20,6 +20,10 @@ public class Category implements Serializable{
 	
 	private String name;
 	
+	public Category() {
+		super();
+	}
+
 	/**
 	 * @param id
 	 * @param name
