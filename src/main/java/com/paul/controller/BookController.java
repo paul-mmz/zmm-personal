@@ -31,7 +31,6 @@ public class BookController {
 		List<Category> categories = bookService.getAllCategories();
 		model.addAttribute("categories", categories);
 		Book book = new Book();
-		book.setId(100L);
 		book.setAuthor("paul");
 		book.setTitle("jsp");
 		model.addAttribute("book", book);

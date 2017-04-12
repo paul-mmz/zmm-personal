@@ -32,6 +32,12 @@
 				<label for="isbn">ISBN: </label>
 				<form:input id="isbn" path="isbn" />
 			</p>
+			
+			<p>
+				<label for="price">Price: </label>
+				<form:input id="price" path="price"/>
+				<!-- <input type="text" id="price" name="price"> -->
+			</p>
 
 			<p id="buttons">
 				<input id="reset" type="reset" tabindex="4">

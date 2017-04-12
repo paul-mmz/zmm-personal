@@ -26,6 +26,8 @@ public class Book implements Serializable{
 	
 	private String author;
 	
+	private Float price = 0.0f;
+	
 	public Book() {
 		super();
 	}
@@ -84,6 +86,14 @@ public class Book implements Serializable{
 
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+
+	public Float getPrice() {
+		return price;
+	}
+
+	public void setPrice(Float price) {
+		this.price = price;
 	}
 	
 }
