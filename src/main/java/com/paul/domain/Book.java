@@ -4,6 +4,7 @@
 package com.paul.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author hzzhouminmin
@@ -27,6 +28,8 @@ public class Book implements Serializable{
 	private String author;
 	
 	private Float price = 0.0f;
+	
+	private Date publishDate;
 	
 	public Book() {
 		super();
@@ -94,6 +97,14 @@ public class Book implements Serializable{
 
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+
+	public Date getPublishDate() {
+		return publishDate;
+	}
+
+	public void setPublishDate(Date publishDate) {
+		this.publishDate = publishDate;
 	}
 	
 }

@@ -17,6 +17,7 @@
 		<th>ISBN</th>
 		<th>Author</th>
 		<th>Price</th>
+		<th>Publish Date</th>
 	</tr>
 	</table>
 	<c:forEach items="${books}" var="book">
@@ -26,6 +27,7 @@
 			<td>${book.isbn}</td>
 			<td>${book.author}</td>
 			<td>${book.price}</td>
+			<td>${book.publishDate}</td>
 			<td><a href="<c:url value="/book_edit/${book.id}"/>">Edit</a></td>
 		</tr>
 		<br>

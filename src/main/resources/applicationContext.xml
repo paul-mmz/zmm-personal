@@ -12,7 +12,7 @@
 	
 	<context:component-scan base-package="com.paul.controller" />
 	<context:component-scan base-package="com.paul.service" />
-	<mvc:annotation-driven />
+	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources location="/" mapping="/*.html" />
 
 	<bean id="product" class="com.paul.spring.beans.Product" factory-method="getInstance" destroy-method="destory"/>
@@ -38,5 +38,26 @@
 	<bean id = "viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver" >
 		<property name="prefix" value="/WEB-INF/classes/views/" />
 		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean id = "conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" >
+<!-- 		<property name="converters">
+			<set>
+				<ref bean="stringToDateConverter"/>
+			</set>
+		</property> -->
+		<property name="formatters">
+			<set>
+				<ref bean="dateFormatter"/>
+			</set>
+		</property>
+	</bean>
+	
+	<bean id = "stringToDateConverter" class="com.paul.util.StringToDateConverter">
+		<constructor-arg name="datePattern" value="MM-dd-yyyy" />
+	</bean>
+	
+	<bean id = "dateFormatter" class="com.paul.util.DateFormatter">
+		<constructor-arg name="datePattern" value="MM-dd-yyyy" />
 	</bean>
 </beans>
