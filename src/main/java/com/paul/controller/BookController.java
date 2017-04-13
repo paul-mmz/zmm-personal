@@ -5,6 +5,8 @@ package com.paul.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +19,6 @@ import com.paul.domain.Book;
 import com.paul.domain.Category;
 import com.paul.service.BookService;
 import com.paul.util.BookValidator;
-import com.rabbitmq.client.AMQP.Exchange.Bind;
 
 /**
  * @author hzzhouminmin
@@ -41,7 +42,7 @@ public class BookController {
 	}
 	
 	@RequestMapping("/book_save")
-	public String saveBook(@ModelAttribute Book book, BindingResult bindingResult, Model model){
+	public String saveBook(@Valid @ModelAttribute Book book, BindingResult bindingResult, Model model){
 		BookValidator bookValidator = new BookValidator();
 		bookValidator.validate(book, bindingResult);
 		
@@ -73,7 +74,7 @@ public class BookController {
 	}
 	
 	@RequestMapping("/book_update")
-	public String updateBooks(@ModelAttribute Book book, BindingResult bindingResult, Model model) {
+	public String updateBooks(@Valid @ModelAttribute Book book, BindingResult bindingResult, Model model) {
 		BookValidator bookValidator = new BookValidator();
 		bookValidator.validate(book, bindingResult);
 		

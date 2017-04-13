@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -9,55 +8,67 @@
 	http://www.springframework.org/schema/mvc/spring-mvc.xsd
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd">
-	
+
 	<context:component-scan base-package="com.paul.controller" />
 	<context:component-scan base-package="com.paul.service" />
 	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources location="/" mapping="/*.html" />
 
-	<bean id="product" class="com.paul.spring.beans.Product" factory-method="getInstance" destroy-method="destory"/>
+	<bean id="product" class="com.paul.spring.beans.Product"
+		factory-method="getInstance" destroy-method="destory" />
 
-	<bean id = "calendar" class = "java.util.Calendar" factory-method="getInstance"/>
-	
-	<bean id = "product1" class = "com.paul.spring.beans.Product">
+	<bean id="calendar" class="java.util.Calendar" factory-method="getInstance" />
+
+	<bean id="product1" class="com.paul.spring.beans.Product">
 		<constructor-arg name="name" value="paul" />
 		<constructor-arg name="number" value="100" />
 		<constructor-arg index="2" value="health" />
 	</bean>
-	
-	<bean id = "product2" class = "com.paul.spring.beans.Product">
+
+	<bean id="product2" class="com.paul.spring.beans.Product">
 		<property name="calendar" ref="calendar" />
 	</bean>
-	
-	
-	
-<!-- 	<bean name = "/newinput" class="com.paul.controller.ProductInput"/> -->
-	
-<!-- 	<bean name = "/productSave" class = "com.paul.controller.ProductDetails" /> -->
-	
-	<bean id = "viewResolver" class = "org.springframework.web.servlet.view.InternalResourceViewResolver" >
+
+
+
+	<!-- <bean name = "/newinput" class="com.paul.controller.ProductInput"/> -->
+
+	<!-- <bean name = "/productSave" class = "com.paul.controller.ProductDetails" 
+		/> -->
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/classes/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	<bean id = "conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" >
-<!-- 		<property name="converters">
-			<set>
-				<ref bean="stringToDateConverter"/>
-			</set>
-		</property> -->
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<!-- <property name="converters"> <set> <ref bean="stringToDateConverter"/> 
+			</set> </property> -->
 		<property name="formatters">
 			<set>
-				<ref bean="dateFormatter"/>
+				<ref bean="dateFormatter" />
 			</set>
 		</property>
 	</bean>
-	
-	<bean id = "stringToDateConverter" class="com.paul.util.StringToDateConverter">
+
+	<bean id="stringToDateConverter" class="com.paul.util.StringToDateConverter">
 		<constructor-arg name="datePattern" value="MM-dd-yyyy" />
 	</bean>
-	
-	<bean id = "dateFormatter" class="com.paul.util.DateFormatter">
+
+	<bean id="dateFormatter" class="com.paul.util.DateFormatter">
 		<constructor-arg name="datePattern" value="MM-dd-yyyy" />
+	</bean>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB-INF/classes/message" />
 	</bean>
 </beans>

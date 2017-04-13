@@ -6,6 +6,10 @@ package com.paul.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
 /**
  * @author hzzhouminmin
  *
@@ -21,14 +25,18 @@ public class Book implements Serializable{
 	
 	private String isbn;
 	
+	@Size(min=3, max =30)
 	private String title;
 	
 	private Category category;
 	
+	@Size(min=2, max =20)
 	private String author;
 	
+	@Max(100)
 	private Float price = 0.0f;
 	
+	@Past
 	private Date publishDate;
 	
 	public Book() {
