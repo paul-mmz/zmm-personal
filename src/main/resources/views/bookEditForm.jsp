@@ -9,7 +9,7 @@
 <title>Edit Book Form</title>
 </head>
 <body>
-	<form:form commandName="book" action="../book_update" method="post">
+	<form:form commandName="book" action="/book_update" method="post">
 		<fieldset>
 			<legend>Edit a book</legend>
 			<form:hidden path="id" />
