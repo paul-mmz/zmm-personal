@@ -9,7 +9,7 @@
 <title>Add Book From</title>
 </head>
 <body>
-	<form:form commandName="book" action="book_save" method="post">
+	<form:form commandName="book" action="book_save" enctype="multipart/form-data" method="post">
 		<fieldset>
 			<legend>Add a book</legend>
 			
@@ -67,6 +67,11 @@
 			<p>
 				<label for="publishDate">Publish Date: </label>
 				<form:input id="publishDate" path="publishDate"/>
+			</p>
+			
+			<p>
+				<label for="file">Files: </label>
+				<input type = "file" name="files[0]" />
 			</p>
 
 			<p id="buttons">

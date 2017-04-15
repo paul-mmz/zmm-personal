@@ -5,10 +5,13 @@ package com.paul.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
+
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author hzzhouminmin
@@ -38,6 +41,8 @@ public class Book implements Serializable{
 	
 	@Past
 	private Date publishDate;
+	
+	private List<MultipartFile> files;
 	
 	public Book() {
 		super();
@@ -113,6 +118,14 @@ public class Book implements Serializable{
 
 	public void setPublishDate(Date publishDate) {
 		this.publishDate = publishDate;
+	}
+
+	public List<MultipartFile> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<MultipartFile> files) {
+		this.files = files;
 	}
 	
 }

@@ -28,6 +28,9 @@
 			<td>${book.author}</td>
 			<td>${book.price}</td>
 			<td>${book.publishDate}</td>
+			<c:forEach items="${book.files}" var="file">
+				<td>${file.originalFilename}</td>
+			</c:forEach>
 			<td><a href="<c:url value="/book_edit/${book.id}"/>">Edit</a></td>
 		</tr>
 		<br>
