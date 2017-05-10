@@ -13,6 +13,10 @@
 	<context:component-scan base-package="com.paul.service" />
 	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources location="/" mapping="/*.html" />
+	
+	<bean class="com.paul.spring.processor.Processor1"/>
+	
+	<bean class="com.paul.spring.processor.Processor2"/>  
 
 	<bean id="product" class="com.paul.spring.beans.Product"
 		factory-method="getInstance" destroy-method="destory" />
@@ -28,7 +32,6 @@
 	<bean id="product2" class="com.paul.spring.beans.Product">
 		<property name="calendar" ref="calendar" />
 	</bean>
-
 
 
 	<!-- <bean name = "/newinput" class="com.paul.controller.ProductInput"/> -->
