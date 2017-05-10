@@ -40,6 +40,13 @@ DBUnit
 
 Mockito
 
+XML文件的头部的各个标签的作用和意思
+
+Spring中Bean的生命周期
+
+java解析XML文件，SAXReader
+dom4j是一个Java的XML API，类似于jdom，用来读写XML文件的。dom4j是一个非常非常优秀的Java XML API，具有性能优异、功能强大和极端易用使用的特点，同时它也是一个开放源代码的软件，可以在SourceForge上找到它。
+DOM解析XML，基本的解析方式有两种,一种叫SAX，另一种叫DOM
 
 
 
@@ -96,15 +103,10 @@ http://calvin1978.blogcn.com/articles/tomcat-threadpool.html
 
 Druid学习
 
-BeanFactoryAware
+Bean生命周期,BeanFactoryAware,InitializingBean,BeanFactory,FactoryBean等接口
+http://www.cnblogs.com/digdeep/p/4518571.html
 
-InitializingBean
-
-BeanFactory
-
-FactoryBean
-
-dubbo中的stub,有些接口中对某一个接口有两个声明，如：CreditsService,CreditsServiceImpl和CreditsServiceStub
+dubbo中的stub,有些接口中对某一个接口有两个声明
 
 
 
