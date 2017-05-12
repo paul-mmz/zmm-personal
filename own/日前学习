@@ -104,7 +104,15 @@ http://calvin1978.blogcn.com/articles/tomcat-threadpool.html
 Druid学习
 
 Bean生命周期,BeanFactoryAware,InitializingBean,BeanFactory,FactoryBean等接口
-http://www.cnblogs.com/digdeep/p/4518571.html
+http://www.cnblogs.com/digdeep/p/4518571.html（bean容器的启动和bean的实例化）
+http://blog.csdn.net/caihaijiang/article/details/35552859(Spring启动ApplicationContext的一个过程)
+
+AutowiredAnnotationBeanPostProcessor
+CommonAnnotationBeanPostProcessor
+PersistenceAnnotationBeanPostProcessor
+RequiredAnnotationBeanPostProcessor
+
+1）bean容器的启动阶段；2）容器中bean的实例化阶段；
 
 dubbo中的stub,有些接口中对某一个接口有两个声明
 
@@ -116,3 +124,8 @@ dubbo中的stub,有些接口中对某一个接口有两个声明
 分布式事务锁：
 redis实现
 zookeeper实现
+
+
+
+常用架包：
+fastjson.jar,commons-io.jar,commons-collections.jar,commons-logging.jar等架包

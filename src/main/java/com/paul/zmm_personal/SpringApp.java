@@ -23,5 +23,6 @@ public class SpringApp {
         
         Product p2 = context.getBean("product2", Product.class);
         System.out.println(p2.getCalendar().getTimeInMillis());
+        System.out.println(p2.getName());
     }
 }

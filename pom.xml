@@ -224,7 +224,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
 		<finalName>zmm-personal</finalName>
