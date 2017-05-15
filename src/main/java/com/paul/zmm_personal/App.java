@@ -2,8 +2,6 @@ package com.paul.zmm_personal;
 
 import java.util.UUID;
 
-import com.netease.haitao.core.util.encrypt.DBEncryptUtil;
-
 public class App {
 
 	public static void main(String[] args) {
