@@ -129,3 +129,6 @@ zookeeper实现
 
 常用架包：
 fastjson.jar,commons-io.jar,commons-collections.jar,commons-logging.jar等架包
+
+
+javaagent的使用，以及java自带的各种分析工具，如反编译工具javap等
