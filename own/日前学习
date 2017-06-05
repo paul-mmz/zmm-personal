@@ -132,3 +132,14 @@ fastjson.jar,commons-io.jar,commons-collections.jar,commons-logging.jar等架包
 
 
 javaagent的使用，以及java自带的各种分析工具，如反编译工具javap等
+
+
+maven中模块和父子工程集成的概念
+
+maven中父子工程的web工程如何自动拉去最新的api工程的api包
+
+java内部类的用法，什么static class A中的构造函数不能使public的
+
+full gc
+
+https://mp.weixin.qq.com/s/cfWwjhKgDXMSQ3BzJ_S2Ag
