@@ -7,6 +7,8 @@
 *.iml
 .classpath
 .project
+/log
+/logs
 
 # BlueJ files
 *.ctxt
