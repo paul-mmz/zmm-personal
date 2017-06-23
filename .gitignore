@@ -2,6 +2,13 @@
 /.settings
 /target
 !.gitignore
+/.git
+/.idea
+*.iml
+.classpath
+.project
+/log
+/logs
 
 # BlueJ files
 *.ctxt

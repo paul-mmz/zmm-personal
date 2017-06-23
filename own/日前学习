@@ -138,8 +138,35 @@ maven中模块和父子工程集成的概念
 
 maven中父子工程的web工程如何自动拉去最新的api工程的api包
 
-java内部类的用法，什么static class A中的构造函数不能使public的
+java内部类的用法，为什么static class A中的构造函数不能使public的
 
-full gc
+full gc & cms垃圾回收机制
 
 https://mp.weixin.qq.com/s/cfWwjhKgDXMSQ3BzJ_S2Ag
+
+springmvc中controller之间的跳转，以及controller和service的bean的关系，子容器和父容器的关系
+
+分布式事务的实现，赵龙的ppt
+
+************************************************************************************************************
+包材推荐 李永刚，林进固 2017.5月份 http://ks.netease.com/blog?id=7721 
+ncr上层框架ncache对批量id读写的改进 丁鸣亮 2017.5月份 http://ks.netease.com/blog?id=7701 
+考拉移动端服务化灰度方案 陈苗荣 2017.4月份 http://ks.netease.com/blog?id=7687 
+助力流式数据处理快速开发 曹一帆 2017.3月份 http://ks.netease.com/blog?id=7706 
+利用jira自动生成可视化资源地图 朱珊珊 2017.5月份 http://ks.netease.com/blog?id=7699 
+基于akka的多线程框架在考拉APP后端的应用 黄晓军 2017.2月份 http://ks.netease.com/blog?id=7583 
+改造OpenVPN，造福开发测试童鞋 林奇恩 2017.3月份 http://ks.netease.com/blog?id=7607 
+Foxman, 基于微核架构的 Mock 解决方案 许骏宇 2017.3月份 http://ks.netease.com/blog?id=7668 
+Redis物理机在资源投放系统中的使用 梁宏达 2017.3月份 http://ks.netease.com/blog?id=7649 
+设计稿一键转化为iOS UI代码的Sketch插件 梁斐然 2017.5月份 http://ks.netease.com/blog?id=7726 
+APP商品详情页性能优化实践 王志超 2017.4月份 http://ks.netease.com/blog?id=7725 
+Android通知栏介绍与适配总结 黎星 2017.3月份 http://ks.netease.com/blog?id=7728 
+如何在推荐系统中快速灵活地嵌入商业策略投放系统 傅凌进 2017.5月份 http://ks.netease.com/blog?id=7680 
+考拉android全局滑动返回及联动效果的实现 许方镇 2017.1月份 http://ks.netease.com/blog?id=7739 
+考拉业务监控框架--BizMonitor 程汉 2017.1月份 http://ks.netease.com/blog?id=7738 
+ABTest 下单服务化服务化 胡鹏杰 2017.4月份 http://ks.netease.com/blog?id=7735 
+考拉Android基于weex动态化方案实现 杨鑫 2017.5月份 http://ks.netease.com/blog?id=7731 
+搜索实时个性化模型——基于FTRL和个性化推荐的搜索排序优化 穆学锋 2017.5月份 http://ks.netease.com/blog?id=7733 
+**************************************************************************************************************
+
+disconf如何做到同一条语句能从配置文件或者disconf服务器里读取配置
