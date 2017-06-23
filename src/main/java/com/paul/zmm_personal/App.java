@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String... args) {
 	    System.out.println("Hello World");
 	    
 	    UUID uuid = UUID.randomUUID();
