@@ -175,4 +175,4 @@ idea快捷键：
 https://www.jetbrains.com/help/idea/eclipse.html
 http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/project-composition-introduce.html
 
-@Resource注解不支持static域
+@Resource注解不支持static域 但是可以通过set方法xml导入形式注入
