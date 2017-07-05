@@ -174,3 +174,5 @@ disconf如何做到同一条语句能从配置文件或者disconf服务器里读
 idea快捷键：
 https://www.jetbrains.com/help/idea/eclipse.html
 http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/project-composition-introduce.html
+
+@Resource注解不支持static域

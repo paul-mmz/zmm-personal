@@ -27,9 +27,9 @@ public class App {
 		System.out.println(key);
 
 		System.out.println("hah");
-		System.out.println(DBEncryptUtil.decrypt("a#{160329_ee865e037d6476a97a89c010009cda3c"));
-		System.out.println(DBEncryptUtil.encrypt("13606636350"));
-		System.out.println(DBEncryptUtil.genMD5withSalt("13606636350"));
+		System.out.println(DBEncryptUtil.decrypt("a#{160329_08c76eaef3e8957564c28f0765e3d773"));
+		System.out.println(DBEncryptUtil.encrypt("13199999999"));
+		System.out.println(DBEncryptUtil.genMD5withSalt("13199999999"));
 		
 		System.out.println(DBEncryptUtil.encrypt("15105197523"));
 		System.out.println(DBEncryptUtil.genMD5withSalt("15105197523"));
