@@ -1,19 +1,38 @@
 package com.paul.zmm_personal;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.UUID;
 
+import com.netease.haitao.core.util.encrypt.DBEncryptUtil;
+
 public class App {
+	private static final String BATCHQUERY_FREQUENCY_CHECK_KEY_PREFIX = "batchQuery_frequency-";
 
+	public static void main(String[] args) {
+		System.out.println("Hello World");
 
-    public static void main(String[] args) {
-        System.out.println("Hello World");
+		UUID uuid = UUID.randomUUID();
+		System.out.println(uuid);
 
-        UUID uuid = UUID.randomUUID();
-        System.out.println(uuid);
-        for (char c : "THIS IS A StRING".toCharArray()) {
-            System.out.println(c);
-        }
-        System.out.println(args.getClass().getName().toString());
-        System.out.println("STRING".getClass().getName().toString());
-    }
+		Date date = new Date();
+		System.out.println(date.toString());
+
+		Calendar c = Calendar.getInstance();
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+		System.out.println(format.format(date));
+
+		String key = BATCHQUERY_FREQUENCY_CHECK_KEY_PREFIX + format.format(new Date());
+		System.out.println(key);
+
+		System.out.println("hah");
+		System.out.println(DBEncryptUtil.decrypt("a#{160329_08c76eaef3e8957564c28f0765e3d773"));
+		System.out.println(DBEncryptUtil.encrypt("13199999999"));
+		System.out.println(DBEncryptUtil.genMD5withSalt("13199999999"));
+		
+		System.out.println(DBEncryptUtil.encrypt("15105197523"));
+		System.out.println(DBEncryptUtil.genMD5withSalt("15105197523"));
+	}
+
 }
