@@ -22,17 +22,6 @@ public class App {
 		Calendar c = Calendar.getInstance();
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
 		System.out.println(format.format(date));
-
-		String key = BATCHQUERY_FREQUENCY_CHECK_KEY_PREFIX + format.format(new Date());
-		System.out.println(key);
-
-		System.out.println("hah");
-		System.out.println(DBEncryptUtil.decrypt("a#{160329_08c76eaef3e8957564c28f0765e3d773"));
-		System.out.println(DBEncryptUtil.encrypt("13199999999"));
-		System.out.println(DBEncryptUtil.genMD5withSalt("13199999999"));
-		
-		System.out.println(DBEncryptUtil.encrypt("15105197523"));
-		System.out.println(DBEncryptUtil.genMD5withSalt("15105197523"));
 	}
 
 }
