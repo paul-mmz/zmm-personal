@@ -9,7 +9,11 @@ http://bbs.netease.im/read-tid-597
 AOP是如何生成代理类的/JDK代理和cglib代理
 切面的几种技术Spring自带切面/AspectJ
 
-阿里技术公众号
+学习阅读的途径：
+1.微信公众号：如阿里技术公众号
+2.简书阅读
+3.Demo大师（http://www.demodashi.com/）
+4.ITS社区（http://www.itsshq.com/）
 
 Disconf作为static变量，省略各个类中需要使用时进行的自动注入配置
 
@@ -176,3 +180,29 @@ https://www.jetbrains.com/help/idea/eclipse.html
 http://wiki.jikexueyuan.com/project/intellij-idea-tutorial/project-composition-introduce.html
 
 @Resource注解不支持static域 但是可以通过set方法xml导入形式注入
+，对静态域的注入方式：
+1.在构造函数上用@AutoWired注解构造函数：
+public static String s;
+
+@Autowired
+Constructor(@Qualifier("string") String string) {
+	this.s = string;
+}
+
+2.对静态域设置get，set方法，然后在xml里配的时候用<property>标签导入
+
+3.用@PostConstruct注解标注一个初始化静态域的方法
+@PostConstruct
+public void init() {
+	static = ??
+}
+
+以前的错误：
+在应用基于注解的切面时，A类（是B接口的实现类）使用了该注解，则A类spring的bean是会被代理执行的。如果在另一个类用对A类声明的域注入A的bean，则会报错。因为此时A的bean是个代理，和A类的类型不符合。
+而对B接口声明的域注入A类的bean，则可以，因为此时可以安全的向上类型转换。
+
+分享计划：
+1.下周末两天把ppt做好
+2.在下周末之前，暂时确定分享maven的学习以及基于maven的对整个工程的构建过程
+3.目前先查资料学习spring的bean的生命周期问题，以及java里的实例初始化问题。
+4.如果3的问题准备的好，有深度，则分享该主题，否则还是分析maven以及构建问题。
