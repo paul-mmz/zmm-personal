@@ -203,6 +203,8 @@ public void init() {
 
 http://mp.weixin.qq.com/s?__biz=MzIxNDU4NjE1OQ==&mid=2247483874&idx=1&sn=3b43c5953fa66a60f39371b1dead2972&chksm=97a407a2a0d38eb48e016bfab1cebba6818ae11faa542782a4c9aa1ef4736426c4e1ed21fc99&mpshare=1&scene=1&srcid=0711D9yTgYdXgoNyUiaKhdYZ#rd
 
+CountDownLatch、CyclicBarrier、Semaphore、ConcurrentHashMap和BlockingQueue
+
 分享计划：
 1.下周末两天把ppt做好
 2.在下周末之前，暂时确定分享maven的学习以及基于maven的对整个工程的构建过程

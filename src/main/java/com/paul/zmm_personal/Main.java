@@ -14,7 +14,7 @@ public class Main {
 
     public static Executor getThreadPool() {
         BlockingDeque<Runnable> queue = new LinkedBlockingDeque<>(100);
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 20, 300L, TimeUnit.SECONDS, queue, new RejectedExecutionHandler() {
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 30L, TimeUnit.SECONDS, queue, new RejectedExecutionHandler() {
             @Override
             public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
                 throw new RuntimeException("can't handle taks");
@@ -50,14 +50,15 @@ public class Main {
     public static void main(String[] args) throws InterruptedException, ClassNotFoundException {
         Singleton.f();
         Singleton instance = Singleton.getInstance();
-//        countDownLatch = new CountDownLatch(10);
-//        Executor executor = getThreadPool();
-//        for (int i = 0; i < 10; i++) {
-//            executor.execute(new Task(countDownLatch, i));
-//        }
-//        countDownLatch.await();
-//        System.out.println("the last main thread to return");
-//        System.out.println(set.size());
+        System.out.println(instance);
+        countDownLatch = new CountDownLatch(10);
+        Executor executor = getThreadPool();
+        for (int i = 0; i < 10; i++) {
+            executor.execute(new Task(countDownLatch, i));
+        }
+        countDownLatch.await();
+        System.out.println("the last main thread to return");
+        System.out.println(set);
 ////        Class<? extends Class> aClass = Outer.class.getClass();
 //        Class<?> aClass = Class.forName("com.paul.zmm_personal.Outer");
     }
