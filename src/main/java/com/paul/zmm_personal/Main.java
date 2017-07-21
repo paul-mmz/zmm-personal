@@ -44,21 +44,20 @@ public class Main {
             }
             countDownLatch.countDown();
             System.out.println("the " + num + "thread to return");
+            return;
         }
     }
 
     public static void main(String[] args) throws InterruptedException, ClassNotFoundException {
-        Singleton.f();
-        Singleton instance = Singleton.getInstance();
-        System.out.println(instance);
         countDownLatch = new CountDownLatch(10);
         Executor executor = getThreadPool();
         for (int i = 0; i < 10; i++) {
             executor.execute(new Task(countDownLatch, i));
         }
-        countDownLatch.await();
+        countDownLatch.await(1000,TimeUnit.MILLISECONDS);
         System.out.println("the last main thread to return");
         System.out.println(set);
+        return;
 ////        Class<? extends Class> aClass = Outer.class.getClass();
 //        Class<?> aClass = Class.forName("com.paul.zmm_personal.Outer");
     }
