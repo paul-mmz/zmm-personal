@@ -5,8 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
-import com.netease.haitao.core.util.encrypt.DBEncryptUtil;
-
 public class App {
 	private static final String BATCHQUERY_FREQUENCY_CHECK_KEY_PREFIX = "batchQuery_frequency-";
 
