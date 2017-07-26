@@ -23,7 +23,6 @@
 	</properties>
 
 	<dependencies>
-
 		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -36,7 +35,6 @@
 			<artifactId>haitao-core-jar</artifactId>
 			<version>1.16.201604201518</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
