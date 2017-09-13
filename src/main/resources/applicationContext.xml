@@ -20,6 +20,15 @@
 	
 	<bean class="com.paul.spring.processor.BeanFactoryProcessor" />
 
+	<bean id="testclass" class="com.paul.proxy.TestClass"/>
+	<bean id="instanceProxy" class="com.paul.proxy.InstanceProxy"/>
+
+	<bean id="proxyManager" class="com.paul.proxy.ProxyManager">
+		<property name="type" value="2"/>
+		<property name="proxy1" ref="testclass"/>
+		<property name="proxy2" ref="instanceProxy"/>
+	</bean>
+
 	<bean id="product" class="com.paul.spring.beans.Product"
 		factory-method="getInstance" destroy-method="destory" />
 
