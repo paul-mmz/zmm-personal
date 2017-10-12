@@ -15,9 +15,18 @@ public class DynamicProxy implements InvocationHandler{
     }  
   
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {  
-        System.out.println("接口的方法全部变成这样了");  
-        //这里source是TestClass，但是我们不能使用反射调用它的方法，像下面这样，放开这一行会抛异常  
-        return method.invoke(source, args);  
+        System.out.println("接口的方法全部变成这样了");
+        if (method.getName().contains("method1")) {
+            System.out.println("切在method1前");
+        } else if (method.getName().contains("method2")) {
+            System.out.println("切在method2前");
+        } else if (method.getName().contains("method3")) {
+            System.out.println("切在method3前");
+        }
+
+        System.out.println(method.getDeclaringClass().getName());
+//        return method.invoke(proxy, args);
+        return method.invoke(source, args);
     }  
     
 //    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {  
@@ -31,7 +40,8 @@ public class DynamicProxy implements InvocationHandler{
       
     public static void main(String[] args) {  
         //只要你传入就可以强转成功  
-        TestInterface object =  (TestInterface) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class[]{TestInterface.class}, new DynamicProxy(new TestClass()));  
+        TestInterface object =  (TestInterface) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(),
+                new Class[]{TestInterface.class}, new DynamicProxy(new TestClass()));
         object.method1();  
         object.method2();  
         object.method3();  

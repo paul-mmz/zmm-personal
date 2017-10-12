@@ -237,6 +237,13 @@
 			</exclusions>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/cglib/cglib-nodep -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>zmm-personal</finalName>
