@@ -43,7 +43,15 @@
   	<servlet-name>myHttpServlet</servlet-name>
   	<url-pattern>/myhttp</url-pattern>
   </servlet-mapping>
-  
+	<servlet>
+		<servlet-name>beerSelect</servlet-name>
+		<servlet-class>com.paul.servlet.headFirst.BeerSelect</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>beerSelect</servlet-name>
+		<url-pattern>/selectBeer.do</url-pattern>
+	</servlet-mapping>
+
   <welcome-file-list>
   	<welcome-file>welcome.jsp</welcome-file>
   </welcome-file-list>
