@@ -18,7 +18,15 @@
   	<!--<filter-name>MyFilter</filter-name>-->
   	<!--<url-pattern>/*</url-pattern>-->
   <!--</filter-mapping>-->
-  
+	<context-param>
+		<param-name>context-key1</param-name>
+		<param-value>context-value1</param-value>
+	</context-param>
+	<context-param>
+		<param-name>context-key2</param-name>
+		<param-value>context-value2</param-value>
+	</context-param>
+
   <servlet>
   	<servlet-name>dispatcherServlet</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -46,10 +54,35 @@
 	<servlet>
 		<servlet-name>beerSelect</servlet-name>
 		<servlet-class>com.paul.servlet.headFirst.BeerSelect</servlet-class>
+		<init-param>
+			<param-name>key1</param-name>
+			<param-value>value1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>key2</param-name>
+			<param-value>value2</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>beerSelect</servlet-name>
 		<url-pattern>/selectBeer.do</url-pattern>
+	</servlet-mapping>
+
+	<listener>
+		<listener-class>com.paul.servlet.headFirst.MyRequestListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.paul.servlet.headFirst.MyServletContextListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>welcomeServlet</servlet-name>
+		<servlet-class>com.paul.servlet.headFirst.WelcomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>welcomeServlet</servlet-name>
+		<url-pattern>/newWelcome.html</url-pattern>
 	</servlet-mapping>
 
   <welcome-file-list>
