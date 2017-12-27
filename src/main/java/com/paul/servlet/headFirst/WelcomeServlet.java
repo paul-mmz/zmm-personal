@@ -50,9 +50,9 @@ public class WelcomeServlet extends HttpServlet {
                 "</head>\n" +
                 "<body>\n" +
                 "\twelcome" + userName +
-                "<a href=\"" + resp.encodeURL("/form.html") + "\">click me to form.html</a>" +
+                "<a href=\"" + resp.encodeURL("/zmm-personal/form.html") + "\">click me to form.html</a>" +
                 "<p>" +
-                "<a href=\"" + resp.encodeURL("/newWelcome.html") + "\">back to welcome</a>" +
+                "<a href=\"" + resp.encodeURL("/zmm-personal/newWelcome.html") + "\">back to welcome</a>" +
                 "</body>\n" +
                 "</html>");
     }

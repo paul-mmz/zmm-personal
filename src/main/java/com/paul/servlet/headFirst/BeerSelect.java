@@ -44,7 +44,7 @@ public class BeerSelect extends HttpServlet {
         }
 
         req.setAttribute("styles", brands);
-        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/classes/views/beerSelect.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("WEB-INF/classes/views/beerSelect.jsp");
         view.forward(req, resp);
     }
 }
