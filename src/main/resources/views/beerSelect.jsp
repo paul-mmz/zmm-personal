@@ -12,7 +12,10 @@
 <body>
 	<h1 align="center">Beer Recommendations JSP</h1>
 	<p/>
+	<%! public static int count = 1; %>
+	<%= "this is the " + count + " people visit my websit!" %>
 	<%
+		++count;
 		String userName = null;
 		if (session.isNew()) {
 			userName = "Stranger, This is thr first time to visit our website.";
