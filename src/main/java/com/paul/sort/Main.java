@@ -16,6 +16,15 @@ public class Main {
         list1.add(2);
         list1.add(1);
         list1.add(0);
+        System.out.println(list1);
+
+//        QuickSort.quickSort(list1, 2);
+
+        HeapSort.heapSort(list1);
+
+        System.out.println(list1);
+
+        System.out.println("******************");
 
         List<Integer> list2 = new ArrayList<>();
         list2.add(0);
@@ -28,18 +37,11 @@ public class Main {
         list2.add(7);
         list2.add(8);
         list2.add(9);
-
-        System.out.println(list1);
-
-        QuickSort.quickSort(list1, 4);
-
-        System.out.println(list1);
-
-        System.out.println("***************************");
-
         System.out.println(list2);
 
-        QuickSort.quickSort(list2, 4);
+//        QuickSort.quickSort(list2, 2);
+
+        HeapSort.heapSort(list2);
 
         System.out.println(list2);
 
