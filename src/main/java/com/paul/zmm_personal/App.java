@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.UUID;
 
 public class App {
-	private static final String BATCHQUERY_FREQUENCY_CHECK_KEY_PREFIX = "batchQuery_frequency-";
 
 	public static void main(String[] args) {
 		System.out.println("Hello World");

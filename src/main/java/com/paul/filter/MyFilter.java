@@ -7,6 +7,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet Filter implementation class MyFilter
@@ -32,7 +33,11 @@ public class MyFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		System.out.println("zhe li shi: " + config.getInitParameter("site"));
-		chain.doFilter(request, response);
+//		MyResponse myRes = new MyResponse((HttpServletResponse) response);
+//		chain.doFilter(request, myRes);
+		chain.doFilter(request,response);
+		System.out.println("after myFilter process……");
+
 	}
 
 	/**
