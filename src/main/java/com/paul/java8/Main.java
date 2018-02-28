@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -46,6 +47,12 @@ public class Main {
             return i * i;
         }).reduce((sum, cost) -> sum + cost).get();
         System.out.println(su);
+
+        System.out.println(integers.stream().reduce((a,b) -> {return a+b;}).get());
+        System.out.println(integers.stream().reduce(10, (a,b) -> {return a+b;}));
+
+        Integer suu = integers.stream().reduce(2, (a, b) -> {return a * b;});
+        System.out.println(suu);
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -55,6 +62,14 @@ public class Main {
         lambda2();
 
         stream();
+
+        Stream<List<Integer>> inputStream = Stream.of(
+                Arrays.asList(1),
+                Arrays.asList(2, 3),
+                Arrays.asList(4, 5, 6)
+        );
+        Stream<Integer> outputStream = inputStream.flatMap((childList) -> childList.stream().map(x -> x*x));
+        outputStream.forEach(System.out::println);
 
     }
 
