@@ -7,4 +7,5 @@ package com.paul.java8;
 public interface LambdaInterface {
 
     public String myprint(String s);
+
 }
