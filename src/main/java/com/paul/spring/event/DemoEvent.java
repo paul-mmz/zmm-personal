@@ -11,6 +11,10 @@ public class DemoEvent extends ApplicationEvent {
 
 	private String msg;
 
+	public DemoEvent() {
+		super(new Object());
+	}
+
 	public DemoEvent(Object object, String msg) {
 		super(object);
 		this.msg = msg;

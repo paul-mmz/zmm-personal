@@ -14,6 +14,8 @@
 	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:resources location="/" mapping="/*.html" />
 
+	<import resource="properties.xml" />
+
 	<!--<bean class="com.paul.spring.processor.Processor1" />-->
 
 	<!--<bean class="com.paul.spring.processor.Processor2" />-->
