@@ -252,6 +252,12 @@
 			</exclusions>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava-parent</artifactId>
+			<version>16.0.1</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>zmm-personal</finalName>
