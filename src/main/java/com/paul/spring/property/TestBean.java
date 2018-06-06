@@ -15,11 +15,20 @@ public class TestBean implements Serializable, EnvironmentAware{
 
     private Integer i;
 
-    @Value("${user.host}")
+    @Value("${user.userHost}")
+    private String userHost;
+
+    @Value("${user.userPasswd}")
+    private String userPasswd;
+
+    @Value("#{props.host}")
     private String host;
 
-    @Value("${user.passwd}")
+    @Value("#{props.passwd}")
     private String passwd;
+
+    @Value("#{props.user}")
+    private String user;
 
     private Environment environment;
 
@@ -38,6 +47,31 @@ public class TestBean implements Serializable, EnvironmentAware{
         this.i = i;
     }
 
+    public String getUserHost() {
+        return userHost;
+    }
+
+    public void setUserHost(String userHost) {
+        this.userHost = userHost;
+    }
+
+    public String getUserPasswd() {
+        return userPasswd;
+    }
+
+    public void setUserPasswd(String userPasswd) {
+        this.userPasswd = userPasswd;
+    }
+
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
+    }
+
+    public Environment getEnvironment() {
+        return environment;
+    }
+
     public String getHost() {
         return host;
     }
@@ -54,12 +88,11 @@ public class TestBean implements Serializable, EnvironmentAware{
         this.passwd = passwd;
     }
 
-    @Override
-    public void setEnvironment(Environment environment) {
-        this.environment = environment;
+    public String getUser() {
+        return user;
     }
 
-    public Environment getEnvironment() {
-        return environment;
+    public void setUser(String user) {
+        this.user = user;
     }
 }

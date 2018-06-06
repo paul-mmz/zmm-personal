@@ -17,21 +17,24 @@
             <!--<property name="locations" value="classpath:message.properties"/>-->
         <!--</bean>-->
 
-        <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-            <property name="locations" value="classpath:message.properties"/>
-        </bean>
+        <!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
+            <!--<property name="locations" value="classpath:message.properties"/>-->
+        <!--</bean>-->
 
         <!--<bean class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
             <!--<property name="locations" value="classpath:message.properties"/>-->
         <!--</bean>-->
 
+        <bean id="props" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+            <property name="locations" value="classpath:message.properties"/>
+        </bean>
+
         <!--<bean id="testBean" class="com.paul.spring.property.TestBean">-->
-            <!--<property name="host" value="${user.host}" />-->
-            <!--<property name="passwd" value="${user.passwd}" />-->
+            <!--<property name="userHost" value="${user.userHost}" />-->
+            <!--<property name="userPasswd" value="${user.userPasswd}" />-->
         <!--</bean>-->
 
-        <bean id="testBean" class="com.paul.spring.property.TestBean">
-        </bean>
+        <!--<bean id="testBean" class="com.paul.spring.property.TestBean"/>-->
     </beans>
 
     <beans profile="dev">

@@ -8,6 +8,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import java.util.Properties;
+
 @Configuration
 @ComponentScan
 @ImportResource("classpath:properties.xml")
@@ -37,5 +39,13 @@ public class ConfigBean {
 //        ClassPathResource source = new ClassPathResource("message.properties");
 //        configurer.setLocations(source);
 //        return configurer;
+//    }
+
+//    @Bean(name = "props")
+//    public PropertiesFactoryBean getPropertiesFactoryBean() {
+//        PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
+//        ClassPathResource source = new ClassPathResource("message.properties");
+//        propertiesFactoryBean.setLocations(source);
+//        return propertiesFactoryBean;
 //    }
 }
