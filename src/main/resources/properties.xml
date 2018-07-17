@@ -13,9 +13,10 @@
     <beans profile="test">
         <!--<context:property-placeholder location="classpath:message.properties"/>-->
 
-        <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-            <!--<property name="locations" value="classpath:message.properties"/>-->
-        <!--</bean>-->
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations" value="classpath:message.properties"/>
+            <property name="systemPropertiesMode" value="2"/>
+        </bean>
 
         <!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
             <!--<property name="locations" value="classpath:message.properties"/>-->
@@ -25,14 +26,14 @@
             <!--<property name="locations" value="classpath:message.properties"/>-->
         <!--</bean>-->
 
-        <bean id="props" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-            <property name="locations" value="classpath:message.properties"/>
-        </bean>
-
-        <!--<bean id="testBean" class="com.paul.spring.property.TestBean">-->
-            <!--<property name="userHost" value="${user.userHost}" />-->
-            <!--<property name="userPasswd" value="${user.userPasswd}" />-->
+        <!--<bean id="props" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+            <!--<property name="locations" value="classpath:message.properties"/>-->
         <!--</bean>-->
+
+        <bean id="testBean" class="com.paul.spring.property.TestBean">
+            <property name="userHost" value="${user.usesHost:${host}}" />
+            <property name="userPasswd" value="${user.userPasswd:${user}}" />
+        </bean>
 
         <!--<bean id="testBean" class="com.paul.spring.property.TestBean"/>-->
     </beans>

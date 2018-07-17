@@ -52,9 +52,11 @@ public enum OrderType{
     public static void main(String[] args) {
 		OrderType[] array = values();
 		for(OrderType o : array){
-			System.out.println(o.getDesc() +", " + o.toString());
-			System.out.println(o.intValue() +", " + o.ordinal());
-		}
+//			System.out.println(o.getDesc() +", " + o.toString());
+//			System.out.println(o.intValue() +", " + o.ordinal());
+            System.out.println(o.name());
+            System.out.println(o.ordinal());
+        }
 	}
 
 }

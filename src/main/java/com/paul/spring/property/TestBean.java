@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Created by hzzhouminmin on 2017/12/11.
  */
-@Component("testBean")
+//@Component("testBean")
 public class TestBean implements Serializable, EnvironmentAware{
 
     private Integer i;
@@ -21,13 +21,13 @@ public class TestBean implements Serializable, EnvironmentAware{
     @Value("${user.userPasswd}")
     private String userPasswd;
 
-    @Value("#{props.host}")
+//    @Value("#{props.host}")
     private String host;
 
-    @Value("#{props.passwd}")
+//    @Value("#{props.passwd}")
     private String passwd;
 
-    @Value("#{props.user}")
+//    @Value("#{props.user}")
     private String user;
 
     private Environment environment;
