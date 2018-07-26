@@ -9,8 +9,4 @@ public class App {
 		System.out.println("nihao");
 	}
 
-	public static void ff() {
-		System.out.println("ff");
-	}
-
 }
