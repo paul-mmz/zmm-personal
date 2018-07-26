@@ -16,4 +16,8 @@ public class App {
 						fwefw
 	}
 
+	public static void f() {
+		System.out.println("nihao");
+	}
+
 }
