@@ -1,6 +1,7 @@
 package com.paul.java;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,17 +64,13 @@ public class ExporterUtils {
         public void setDesc(String desc) {
             this.desc = desc;
         }
+
     }
 
-    public static void main(String[] args) {
-//        Field[] fields = ExporterType.A.getClass().getFields();
-//        for (Field field : fields) {
-//            System.out.println(field.toString());
-//        }
-        Method[] methods = ExporterType.class.getMethods();
-        for (Method method : methods) {
-//            if (method.toString().contains("getValue"))
-                System.out.println(method.toString());
+    public static void main(String[] args) throws NoSuchMethodException {
+        ExporterType[] values = ExporterType.values();
+        for (ExporterType type : values) {
+            System.out.println(type.ordinal() + "- " + type.getValue());
         }
     }
 }
