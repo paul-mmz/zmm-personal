@@ -47,7 +47,9 @@
 		<property name="name" value="zhoumm"></property>
 	</bean>
 
-
+	<bean id="kitty" class="com.paul.spring.beans.Kitty">
+		<lookup-method name="getBean" bean="product2"/>
+	</bean>
 
 	<!-- <bean name = "/newinput" class="com.paul.controller.ProductInput"/> -->
 

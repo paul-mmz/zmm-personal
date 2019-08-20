@@ -11,7 +11,7 @@ import java.io.Serializable;
 * @author  hzzhouminmin@corp.netease.com
 * @since 2017/7/26
 **/
-public class Kitty implements Serializable, BeanNameAware, BeanFactoryAware, InitializingBean, DisposableBean {
+public abstract class Kitty implements Serializable, BeanNameAware, BeanFactoryAware, InitializingBean, DisposableBean {
 
     private static final long serialVersionUID = -1L;
 
@@ -71,4 +71,6 @@ public class Kitty implements Serializable, BeanNameAware, BeanFactoryAware, Ini
     public void afterPropertiesSet() throws Exception {
         System.err.println("调用Kitty#afterPropertiesSet");
     }
+
+    public abstract Product getBean();
 }

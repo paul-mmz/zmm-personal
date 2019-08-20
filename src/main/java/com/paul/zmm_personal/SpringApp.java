@@ -2,6 +2,7 @@ package com.paul.zmm_personal;
 
 import com.paul.proxy.ProxyManager;
 import com.paul.proxy.ShowProxy;
+import com.paul.spring.beans.Kitty;
 import com.paul.spring.beans.Product;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -40,6 +41,8 @@ public class SpringApp {
             Product product2 = (Product)xmlBeanFactory.getBean("product2");
             System.out.println(product2.getName());
 
+            Kitty kitty = (Kitty) xmlBeanFactory.getBean("kitty");
+            System.out.println(kitty.getBean().getName());
         }
 
     }
