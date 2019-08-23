@@ -21,6 +21,8 @@ public abstract class Kitty implements Serializable, BeanNameAware, BeanFactoryA
 
     private String owner;
 
+    private Product product;
+
     public Kitty() {
         System.err.println("Kitty的构造器中");
     }
@@ -50,6 +52,14 @@ public abstract class Kitty implements Serializable, BeanNameAware, BeanFactoryA
     public void setOwner(String owner) {
         this.owner = owner;
         System.err.println("设置owner属性");
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     @Override

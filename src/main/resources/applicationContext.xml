@@ -45,10 +45,12 @@
 	<bean id="product2" class="com.paul.spring.beans.Product">
 		<property name="calendar" ref="calendar" />
 		<property name="name" value="zhoumm"></property>
+		<property name="kitty" ref="kitty"/>
 	</bean>
 
 	<bean id="kitty" class="com.paul.spring.beans.Kitty">
 		<lookup-method name="getBean" bean="product2"/>
+		<property name="product" ref="product2"/>
 	</bean>
 
 	<!-- <bean name = "/newinput" class="com.paul.controller.ProductInput"/> -->

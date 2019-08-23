@@ -20,6 +20,8 @@ public class Product implements Serializable {
 
 	private static Product product = null;
 
+	private Kitty kitty;
+
 	public Product() {
 
 	}
@@ -77,4 +79,11 @@ public class Product implements Serializable {
 		System.out.println("produce destoryed!");
 	}
 
+	public Kitty getKitty() {
+		return kitty;
+	}
+
+	public void setKitty(Kitty kitty) {
+		this.kitty = kitty;
+	}
 }
