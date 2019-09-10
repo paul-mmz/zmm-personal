@@ -5,6 +5,7 @@ package com.paul.spring.beans;/**
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 
 /**
@@ -21,8 +22,25 @@ public class Personal implements Serializable, BeanNameAware, BeanFactoryAware, 
 
     private String gender;
 
+    private Product product;
+
+    private Kitty kitty;
+
     public Personal() {
         System.err.println("Personal的构造器中");
+    }
+
+    public Personal(Product product) {
+        this.product = product;
+    }
+
+    public Personal(Integer number) {
+        this.age = number;
+    }
+
+    public Personal(Product product, Kitty kitty) {
+        this.product = product;
+        this.kitty = kitty;
     }
 
     public String getName() {
@@ -67,8 +85,36 @@ public class Personal implements Serializable, BeanNameAware, BeanFactoryAware, 
         System.err.println("调用Personal#destory");
     }
 
+    public String destoryMethod(boolean i) {
+        return "destoryMethod";
+    }
+
     @Override
     public void afterPropertiesSet() throws Exception {
         System.err.println("调用afterPropertiesSet");
+    }
+
+    public void init() {
+        System.out.println("init 方法中");
+    }
+
+    public static Product staticGetProduct() {
+        return new Product();
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Kitty getKitty() {
+        return kitty;
+    }
+
+    public void setKitty(Kitty kitty) {
+        this.kitty = kitty;
     }
 }

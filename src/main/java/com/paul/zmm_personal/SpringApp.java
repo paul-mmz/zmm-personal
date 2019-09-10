@@ -1,8 +1,6 @@
 package com.paul.zmm_personal;
 
-import com.paul.proxy.ProxyManager;
-import com.paul.proxy.ShowProxy;
-import com.paul.spring.beans.Kitty;
+import com.paul.spring.beans.Personal;
 import com.paul.spring.beans.Product;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
@@ -15,16 +13,7 @@ public class SpringApp {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         Product product1 = (Product)context.getBean("product2");
-        System.out.println(product1.getName());
-
-//        ProxyManager bean = (ProxyManager)context.getBean("&proxyManager");
-//        bean.setType(2);
-//        ShowProxy object = bean.getObject();
-//        System.out.println(object.myHandlerFunction());
-//
-//        bean.setType(1);
-//        object = bean.getObject();
-//        System.out.println(object.myHandlerFunction());
+        System.out.println(product1.getKitty());
     }
 
      public static class FileSystemXmlApplicationContextMain {
@@ -38,11 +27,10 @@ public class SpringApp {
     public static class XmlBeanFactoryMain {
         public static void main(String[] args) {
             XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("applicationContext.xml"));
-            Product product2 = (Product)xmlBeanFactory.getBean("product2");
-            System.out.println(product2.getName());
-
-            Kitty kitty = (Kitty) xmlBeanFactory.getBean("kitty");
-            System.out.println(kitty.getBean().getName());
+            Personal personalS = (Personal) xmlBeanFactory.getBean("personalS");
+            System.out.println(personalS);
+            System.out.println(personalS.getProduct());
+            System.out.println(personalS.getKitty());
         }
 
     }

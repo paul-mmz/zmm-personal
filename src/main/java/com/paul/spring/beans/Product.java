@@ -1,5 +1,8 @@
 package com.paul.spring.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.io.Serializable;
 import java.util.Calendar;
 
@@ -20,9 +23,15 @@ public class Product implements Serializable {
 
 	private static Product product = null;
 
+	@Autowired
+	@Qualifier("kitty")
 	private Kitty kitty;
 
 	public Product() {
+
+	}
+
+	public Product(Personal personal) {
 
 	}
 
