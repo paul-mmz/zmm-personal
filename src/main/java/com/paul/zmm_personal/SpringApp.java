@@ -1,5 +1,6 @@
 package com.paul.zmm_personal;
 
+import com.paul.proxy.ProxyManager;
 import com.paul.spring.beans.Personal;
 import com.paul.spring.beans.Product;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -8,12 +9,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
+import java.text.SimpleDateFormat;
+
 public class SpringApp {
+
+    private static String format = "yyyy-MM-dd HH:mm:ss";
+
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+
     public static void main(String[] args) throws Exception {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Product product1 = (Product)context.getBean("product2");
-        System.out.println(product1.getKitty());
+        ProxyManager proxyManager = (ProxyManager)context.getBean("&proxyManager");
+        System.out.println(dateFormat.format(proxyManager.getDate()));
     }
 
      public static class FileSystemXmlApplicationContextMain {

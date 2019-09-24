@@ -37,6 +37,7 @@
 		<property name="type" value="2"/>
 		<property name="proxy1" ref="testclass"/>
 		<property name="proxy2" ref="instanceProxy"/>
+		<property name="date" value="2019-09-20 23:59:59"/>
 	</bean>
 
 	<bean id="product" class="com.paul.spring.beans.Product"
@@ -94,5 +95,18 @@
 	</bean>
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+<!--		<property name="customEditors">-->
+<!--			<map>-->
+<!--				<entry key="java.util.Date" value="com.paul.spring.property.DatePropertyEditor"/>-->
+<!--			</map>-->
+<!--		</property>-->
+		<property name="propertyEditorRegistrars">
+			<array>
+				<bean class="com.paul.spring.property.DatePropertyEditorRegistrar"/>
+			</array>
+		</property>
+	</bean>
 	
 </beans>

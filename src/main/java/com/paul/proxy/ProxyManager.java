@@ -5,6 +5,7 @@ import org.springframework.beans.factory.FactoryBean;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Date;
 
 public class ProxyManager implements FactoryBean<ShowProxy> {
 
@@ -13,6 +14,8 @@ public class ProxyManager implements FactoryBean<ShowProxy> {
     private ShowProxy proxy1;
 
     private ShowProxy proxy2;
+
+    private Date date;
 
     public ProxyManager() {
     }
@@ -75,5 +78,13 @@ public class ProxyManager implements FactoryBean<ShowProxy> {
 
     public void setProxy2(ShowProxy proxy2) {
         this.proxy2 = proxy2;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
