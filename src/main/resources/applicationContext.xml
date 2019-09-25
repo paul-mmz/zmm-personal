@@ -108,5 +108,7 @@
 			</array>
 		</property>
 	</bean>
+
+	<bean id="demoListener" class="com.paul.spring.event.DemoListener"/>
 	
 </beans>

@@ -3,6 +3,7 @@ package com.paul.zmm_personal;
 import com.paul.proxy.ProxyManager;
 import com.paul.spring.beans.Personal;
 import com.paul.spring.beans.Product;
+import com.paul.spring.event.DemoEvent;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -22,6 +23,9 @@ public class SpringApp {
 
         ProxyManager proxyManager = (ProxyManager)context.getBean("&proxyManager");
         System.out.println(dateFormat.format(proxyManager.getDate()));
+
+        DemoEvent demoEvent = new DemoEvent("hello", "world");
+        context.publishEvent(demoEvent);
     }
 
      public static class FileSystemXmlApplicationContextMain {
