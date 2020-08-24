@@ -104,6 +104,29 @@ public class StringMultiply {
     }
 
 
+    public static String multiply_better(String num1, String num2) {
+        if (num1 == null || num2 == null || num1.length() == 0 || num2.length() == 0) {
+            return "0";
+        }
+
+        byte[] result = new byte[num1.length() + num2.length()];
+
+        for (int i = num1.length() - 1; i >= 0; --i) {
+            byte n1 = (byte) (num1.charAt(i) - '0');
+
+            for (int j = num2.length() - 1; j >= 0; --j) {
+                byte n2 = (byte) (num2.charAt(j) - '0');
+
+                int ammas = result[i + j + 1] + n1 * n2;
+
+                result[i + j + 1] = (byte) (ammas % 10);
+                result[i + j] += (byte) (ammas / 10);
+            }
+        }
+
+        return convertByteArray2NumStr(result);
+    }
+
     public static String convertByteArray2NumStr(byte[] bytes) {
         if (bytes == null || bytes.length == 0) {
             return "0";
@@ -126,7 +149,36 @@ public class StringMultiply {
         return result.length() == 0 ? "0" : result.toString();
     }
 
+    public static String multiply_2(String num1, String num2) {
+        if (num1 == null || num2 == null || num1.length() == 0 || num2.length() == 0) {
+            return "0";
+        }
+
+        byte[] result = new byte[num1.length() + num2.length()];
+
+        for (int i = num1.length() - 1; i >= 0; --i) {
+            byte n1 = (byte) (num1.charAt(i) - '0');
+
+            for (int j = num2.length() - 1; j >= 0; --j) {
+                byte n2 = (byte) (num2.charAt(j) - '0');
+
+                result[i + j + 1] += n1 * n2;
+            }
+        }
+
+        for (int i = num1.length() + num2.length() - 1; i > 0; --i) {
+            if (result[i] > 9) {
+                result[i - 1] += (byte) (result[i] / 10);
+                result[i] = (byte) (result[i] % 10);
+            }
+        }
+
+        return convertByteArray2NumStr(result);
+    }
+
     public static void main(String[] args) {
-        System.out.println(multiply("999999999999999999999999", "9999999999999999999999999999999"));
+        System.out.println(multiply("140", "721"));
+        System.out.println(multiply_better("140", "721"));
+        System.out.println(multiply_2("140", "721"));
     }
 }

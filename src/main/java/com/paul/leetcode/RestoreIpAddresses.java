@@ -84,31 +84,7 @@ public class RestoreIpAddresses {
         return true;
     }
 
-    public static List<String> restoreIpAddresses_1(String s) {
-
-        int length = s.length();
-
-        if (s.charAt(0) - '0' > 2 || length > 6) {
-            return null;
-        }
-
-        String ip1, ip2;
-        List<String> result = new ArrayList<>();
-        for (int i = length - 3; i < length; ++i) {
-            ip1 = s.substring(0, i);
-            ip2 = s.substring(i, length);
-
-            if (Integer.valueOf(ip1) < 256 && Integer.valueOf(ip2) < 256) {
-                result.add(new StringBuilder(ip1).append(".").append(ip2).toString());
-            }
-        }
-
-        return result;
-    }
-
     public static void main(String[] args) {
-        System.out.println(restoreIpAddresses("19216811"));
+        System.out.println(restoreIpAddresses("0000"));
     }
-
-
 }

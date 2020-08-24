@@ -21,6 +21,7 @@ public class LongestCommonPrefix {
 
     /**
      * [start, end)
+     *
      * @param strs
      * @param start
      * @param end
@@ -69,27 +70,7 @@ public class LongestCommonPrefix {
             }
         }
 
-        return str1.substring(0, (low + high) / 2);
-    }
-
-
-
-    public static String twoStringCommonPrefix(String str1, String str2) {
-        if (str1 == null || str1.length() == 0 || str2 == null || str2.length() == 0) {
-            return "";
-        }
-
-        int minLength = Math.min(str1.length(), str2.length());
-
-        int i = 0;
-
-        for (; i < minLength; ++i) {
-            if (str1.charAt(i) != str2.charAt(i)) {
-                break;
-            }
-        }
-
-        return str1.substring(0, i);
+        return str1.substring(0, low);
     }
 
     public static String longestCommonPrefix(String[] strs) {
@@ -115,8 +96,7 @@ public class LongestCommonPrefix {
     }
 
     public static void main(String[] args) {
-        String[] strs = new String[]{"flower","flow","flight"};
+        String[] strs = new String[]{"dog", "racecar", "car"};
         System.out.println(longestCommonPrefix_divide(strs));
-
     }
 }
